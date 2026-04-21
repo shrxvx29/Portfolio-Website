@@ -2,7 +2,7 @@ import todoImg from "../assets/projects/TodoApp.png";
 import studentImg from "../assets/projects/student.png";
 import expenseImg from "../assets/projects/expense.png";
 import instaImg from "../assets/projects/instagram.png";
-import portfolioImg from "../assets/projects/portfolio.png";
+import portfolioImg from "../assets/projects/Portfolio.png";
 import guessImg from "../assets/projects/GuessGame.png";
 
 export const projects = [
