@@ -13,8 +13,8 @@ export const projects = [
             "Modern portfolio showcasing projects, skills, animations, and responsive UI.",
         techStack: ["React", "Tailwind", "Framer Motion"],
         image: portfolioImg,
-        liveLink: "https://your-portfolio-link.com",
-        repoLink: "https://github.com/yourusername/portfolio",
+        liveLink: "https://saravanank-portfolio.netlify.app/",
+        repoLink: "https://github.com/shrxvx29/Portfolio-Website",
     },
     {
         id: 5,
