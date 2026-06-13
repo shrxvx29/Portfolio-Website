@@ -65,9 +65,9 @@ const Hero = () => {
 
           <TypeAnimation
             sequence={[
-              "Junior Frontend Developer",
+              "Full Stack Developer",
               2800,
-              "Aspiring Full Stack Developer",
+              "Java  Developer",
               2800,
             ]}
             speed={30}

@@ -9,15 +9,17 @@ import tailwind from "../assets/tailwind-css-.png";
 import react from "../assets/react.svg";
 import sql from "../assets/mysql.png";
 import figma from "../assets/figma.png";
+import java from "../assets/java.png";
 
 const skills = [
+  { name: "Java", icon: java, level: 80 },
+  { name: "MySQL", icon: sql, level: 75 },
   { name: "HTML", icon: html, level: 85 },
   { name: "CSS", icon: css, level: 80 },
   { name: "JavaScript", icon: js, level: 75 },
-  { name: "Bootstrap", icon: bootstrap, level: 70 },
-  { name: "Tailwind", icon: tailwind, level: 75 },
+  { name: "Bootstrap", icon: bootstrap, level: 75 },
   { name: "React", icon: react, level: 70 },
-  { name: "MySQL", icon: sql, level: 60 },
+  { name: "Tailwind", icon: tailwind, level: 70 },
   { name: "Figma", icon: figma, level: 65 },
 ];
 

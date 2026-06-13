@@ -4,8 +4,19 @@ import expenseImg from "../assets/projects/expense.png";
 import instaImg from "../assets/projects/instagram.png";
 import portfolioImg from "../assets/projects/Portfolio.png";
 import guessImg from "../assets/projects/GuessGame.png";
+import hostelImg from "../assets/projects/hostel.png";
 
 export const projects = [
+    {
+    id: 7,
+    title: "Hostel Room Allocation System",
+    description:
+        "Full-stack hostel management system with student management, room management, room allocation, dashboard analytics, authentication, and session handling.",
+    techStack: ["Java", "JSP", "Servlets", "JDBC", "MySQL", "Tomcat"],
+    image: hostelImg,
+    liveLink: "https://github.com/shrxvx29/HostelRoomAllocationSystem",
+    repoLink: "https://github.com/shrxvx29/HostelRoomAllocationSystem",
+    },
     {
         id: 6,
         title: "Personal Portfolio",
