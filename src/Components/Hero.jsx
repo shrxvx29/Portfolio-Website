@@ -190,7 +190,7 @@ const Hero = () => {
 
               <div className="px-7 sm:px-9">
                 <p className="text-2xl font-black sm:text-3xl">
-                  10+
+                  15+
                 </p>
 
                 <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-400 sm:text-xs">

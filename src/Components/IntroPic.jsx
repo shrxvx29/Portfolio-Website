@@ -450,7 +450,7 @@ const IntroPic = () => {
               <div className="pr-2">
 
                 <p className="text-lg font-black leading-none">
-                  5+
+                    7+
                 </p>
 
                 <p
@@ -473,7 +473,7 @@ const IntroPic = () => {
               <div className="px-2">
 
                 <p className="text-lg font-black leading-none">
-                  10+
+                  15+
                 </p>
 
                 <p
