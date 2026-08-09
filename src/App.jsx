@@ -4,6 +4,7 @@ import HomePage from './Pages/HomePage'
 import About from './Pages/About'
 import Skills from './Pages/Skills'
 import Project from './Pages/Project'
+import Academics from './Pages/Academics'
 import Contact from './Pages/Contact'
 import Footer from './Pages/Footer'
 
@@ -16,6 +17,7 @@ const App = () => {
         <About />
         <Skills />
         <Project />
+        <Academics />
         <Contact />
       </section>
       <Footer />
