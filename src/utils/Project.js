@@ -6,7 +6,7 @@ import portfolioImg from "../assets/projects/Portfolio.png";
 import guessImg from "../assets/projects/GuessGame.png";
 import hostelImg from "../assets/projects/hostel.png";
 import jwtsecurity from "../assets/projects/Jwt.png";
-import kickkart from "../assets/projects/kickart.png";
+import kickkart from "../assets/projects/Kickart.png";
 
 export const projects = [
   // =========================================================
