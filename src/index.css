@@ -21,3 +21,94 @@ section[id] {
     transition-duration: 0.01ms !important;
   }
 }
+/* Add to src/index.css */
+
+.portfolio-loader {
+  align-items: center;
+  background: #0b1120;
+  color: #f8fafc;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+}
+
+.portfolio-loader--leaving {
+  animation: portfolio-loader-exit 350ms ease forwards;
+}
+
+.portfolio-loader__content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.portfolio-loader__eyebrow {
+  color: #38bdf8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  margin: 0 0 0.75rem;
+}
+
+.portfolio-loader__title {
+  animation: portfolio-loader-title 650ms cubic-bezier(.22, 1, .36, 1) both;
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  margin: 0;
+}
+
+.portfolio-loader__bar {
+  background: rgba(248, 250, 252, 0.2);
+  height: 3px;
+  margin: 2rem auto 0;
+  max-width: 19rem;
+  overflow: hidden;
+}
+
+.portfolio-loader__bar span {
+  animation: portfolio-loader-progress 1.5s ease-in-out forwards;
+  background: #38bdf8;
+  display: block;
+  height: 100%;
+  transform-origin: left;
+}
+
+@keyframes portfolio-loader-title {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes portfolio-loader-progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes portfolio-loader-exit {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-loader--leaving,
+  .portfolio-loader__title,
+  .portfolio-loader__bar span {
+    animation: none;
+  }
+}
