@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables / Design Tokens */
+:root {
+  /* Primary Indigo Tokens */
+  --primary-50: #EEF2FF;
+  --primary-100: #E0E7FF;
+  --primary-200: #C7D2FE;
+  --primary-300: #A5B4FC;
+  --primary-400: #818CF8;
+  --primary-500: #6366F1;
+  --primary-600: #4F46E5;
+  --primary-700: #4338CA;
+  --primary-800: #3730A3;
+  --primary-900: #312E81;
+  --primary-950: #1E1B4B;
+
+  /* Neutral Grey Tokens */
+  --grey-50: #F9FAFB;
+  --grey-100: #F3F4F6;
+  --grey-200: #E5E7EB;
+  --grey-300: #D1D5DB;
+  --grey-400: #9CA3AF;
+  --grey-500: #6B7280;
+  --grey-600: #4B5563;
+  --grey-700: #374151;
+  --grey-800: #1F2937;
+  --grey-900: #111827;
+
+  /* Light Theme Surface Tokens */
+  --bg-main: #FFFFFF;
+  --bg-section: #F9FAFB;
+  --bg-card: #FFFFFF;
+  --bg-surface: #F3F4F6;
+  
+  --border: #E5E7EB;
+  --border-strong: #D1D5DB;
+
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  --text-very-muted: #9CA3AF;
+
+  --primary: #4F46E5;
+  --primary-hover: #4338CA;
+  --indigo-glow: rgba(79, 70, 229, 0.12);
+}
+
+/* Custom Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 100%;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar - Light Theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C7D2FE;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #818CF8;
+}
+
+/* Glassmorphism Styles - Light */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Modern Gradient Text - Crisp Indigo */
+.gradient-text {
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 50%, #818CF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle Indigo Accent Text */
+.indigo-gradient-text {
+  background: linear-gradient(135deg, #4338CA 0%, #4F46E5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button Hover Effects */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+}
+
+.btn-glow:hover::before {
+  left: 100%;
+}
+
+/* Section Container */
+.section-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Smooth Transitions */
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Custom Editorial & Script Typography */
+.font-script {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+.font-garamond {
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
+}
+
