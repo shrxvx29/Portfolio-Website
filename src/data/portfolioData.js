@@ -7,6 +7,7 @@ import expenseImage from "../public/images/projectImg/exp.webp";
 import studentImage from "../public/images/projectImg/std.webp";
 import todoImage from "../public/images/projectImg/todo.webp";
 import guessGameImage from "../public/images/projectImg/GuessGame.webp";
+import forgeSiteImage from "../public/images/projectImg/forgeSiteImage.jpg"
 
 export const portfolioData = {
   personal: {
@@ -85,10 +86,35 @@ export const portfolioData = {
 
 projects: [
   // =========================================================
-  // 01 — KICKKART
+  // 01 — Forge Site
   // =========================================================
   {
-    id: 1,
+  id: 1,
+  title: "Forge Site",
+  category: "AI Powered Full Stack",
+  highlight: "AI Code Generation • Live Preview • Project Editing",
+  description:
+    "AI-powered website builder that generates complete web projects from natural-language prompts, with live preview, code editing, project management, and instant development workflows.",
+  image: forgeSiteImage,
+  technologies: [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "OpenAI API",
+  ],
+  github: "https://github.com/shrxvx29/Forge-Site---AI-Website-Builder",
+  live: "https://site-forge-ai-website-builder.netlify.app/",
+  featured: true,
+},
+
+  // =========================================================
+  // 02 — KICKKART
+  // =========================================================
+  {
+    id: 2,
     title: "KickKart",
     category: "Full Stack E-Commerce",
     highlight: "Football Jersey Store • Secure Authentication",
@@ -105,30 +131,6 @@ projects: [
     ],
     github: "https://github.com/shrxvx29/KickKart-Jersey-Store-",
     live: "https://kickkartstore.netlify.app/",
-    featured: true,
-  },
-
-  // =========================================================
-  // 02 — SPRING SECURITY AUTHENTICATION
-  // =========================================================
-  {
-    id: 2,
-    title: "Spring Security Authentication API",
-    category: "Backend Authentication & Security",
-    highlight: "JWT Authentication • Google OAuth2",
-    description:
-      "Authentication service that secures registration and login flows, issues JWTs, protects REST endpoints, and supports Google OAuth2 sign-in.",
-    image: jwtImage,
-    technologies: [
-      "Java",
-      "Spring Boot",
-      "Spring Security",
-      "JWT",
-      "OAuth2",
-      "REST API",
-    ],
-    github: "https://github.com/shrxvx29/springboot-jwt-google-auth",
-    live: "https://github.com/shrxvx29/springboot-jwt-google-auth",
     featured: true,
   },
 
@@ -173,7 +175,7 @@ projects: [
       "Framer Motion",
     ],
     github: "https://github.com/shrxvx29/Portfolio-Website",
-    live: "https://saravanank-portfolio.netlify.app/",
+    live: "https://ksaravanan.netlify.app/",
     featured: true,
   },
 

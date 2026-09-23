@@ -344,9 +344,50 @@ export default function Projects() {
   const projects = portfolioData?.projects || [];
 
   const [showAll, setShowAll] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const [prefersReducedMotion, setPrefersReducedMotion] =
     useState(false);
+
+  /* ============================================================
+     CATEGORY CONFIG
+  ============================================================ */
+
+  const categories = [
+    "All",
+    "Full Stack",
+    "AI Powered Full Stack",
+    "Frontend",
+  ];
+
+  const getProjectCategory = (category = "") => {
+    const normalized = category.toLowerCase().trim();
+
+    if (
+      normalized.includes("ai") &&
+      (normalized.includes("full stack") ||
+        normalized.includes("full-stack"))
+    ) {
+      return "AI Powered Full Stack";
+    }
+
+    if (
+      normalized.includes("frontend") ||
+      normalized.includes("front-end") ||
+      normalized.includes("front end")
+    ) {
+      return "Frontend";
+    }
+
+    if (
+      normalized.includes("full stack") ||
+      normalized.includes("full-stack")
+    ) {
+      return "Full Stack";
+    }
+
+    return null;
+  };
 
   /* ============================================================
      REDUCED MOTION
@@ -363,18 +404,27 @@ export default function Projects() {
       setPrefersReducedMotion(event.matches);
     };
 
-    mediaQuery.addEventListener(
-      "change",
-      handleChange
-    );
+    mediaQuery.addEventListener("change", handleChange);
 
     return () => {
-      mediaQuery.removeEventListener(
-        "change",
-        handleChange
-      );
+      mediaQuery.removeEventListener("change", handleChange);
     };
   }, []);
+
+  /* ============================================================
+     CATEGORY FILTER
+  ============================================================ */
+
+  const filteredProjects = useMemo(() => {
+    if (selectedCategory === "All") {
+      return projects;
+    }
+
+    return projects.filter(
+      (project) =>
+        getProjectCategory(project?.category) === selectedCategory
+    );
+  }, [projects, selectedCategory]);
 
   /* ============================================================
      TOP 5 / ALL PROJECTS
@@ -382,13 +432,22 @@ export default function Projects() {
 
   const visibleProjects = useMemo(() => {
     if (showAll) {
-      return projects;
+      return filteredProjects;
     }
 
-    return projects.slice(0, 5);
-  }, [projects, showAll]);
+    return filteredProjects.slice(0, 5);
+  }, [filteredProjects, showAll]);
 
-  const hasMoreProjects = projects.length > 5;
+  const hasMoreProjects = filteredProjects.length > 5;
+
+  /* ============================================================
+     CHANGE CATEGORY
+  ============================================================ */
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setShowAll(false);
+  };
 
   /* ============================================================
      ANIMATION
@@ -403,10 +462,7 @@ export default function Projects() {
       opacity: 1,
 
       transition: {
-        staggerChildren: prefersReducedMotion
-          ? 0
-          : 0.08,
-
+        staggerChildren: prefersReducedMotion ? 0 : 0.08,
         delayChildren: 0.1,
       },
     },
@@ -444,6 +500,7 @@ export default function Projects() {
       ======================================================== */}
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* ======================================================
             HEADER
         ====================================================== */}
@@ -505,19 +562,52 @@ export default function Projects() {
             }}
           >
             A collection of full-stack applications,
-            backend systems, frontend experiences, and
-            practical projects built using modern
+            AI-powered solutions, frontend experiences,
+            and practical projects built using modern
             technologies.
           </p>
+
+          {/* ====================================================
+              CATEGORY FILTER
+          ==================================================== */}
+
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8">
+            {categories.map((category) => {
+              const isActive = selectedCategory === category;
+
+              return (
+                <button
+                  key={category}
+                  type="button"
+                  onClick={() => handleCategoryChange(category)}
+                  className={`
+                    relative px-4 sm:px-5 py-2.5 rounded-xl
+                    text-xs sm:text-sm font-semibold
+                    border transition-all duration-300
+                    ${
+                      isActive
+                        ? "bg-emerald-500 text-black border-emerald-500 shadow-lg shadow-emerald-500/20"
+                        : "bg-white/[0.03] text-gray-400 border-white/10 hover:text-emerald-400 hover:border-emerald-400/30 hover:bg-emerald-400/5"
+                    }
+                  `}
+                  aria-pressed={isActive}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
 
           {/* Project Counter */}
           <div className="flex items-center justify-center gap-2 mt-5">
             <span className="text-emerald-400 font-bold text-lg">
-              {projects.length}
+              {filteredProjects.length}
             </span>
 
             <span className="text-gray-500 text-sm">
-              Projects Built
+              {selectedCategory === "All"
+                ? "Projects Built"
+                : `${selectedCategory} Projects`}
             </span>
           </div>
         </motion.div>
@@ -526,24 +616,50 @@ export default function Projects() {
             PROJECT GRID
         ====================================================== */}
 
-        <motion.div
-          key={showAll ? "all" : "featured"}
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8"
-        >
-          {visibleProjects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-              prefersReducedMotion={
-                prefersReducedMotion
-              }
-            />
-          ))}
-        </motion.div>
+        {visibleProjects.length > 0 ? (
+          <motion.div
+            key={`${selectedCategory}-${showAll}`}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8"
+          >
+            {visibleProjects.map((project, index) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index}
+                prefersReducedMotion={prefersReducedMotion}
+              />
+            ))}
+          </motion.div>
+        ) : (
+          /* ====================================================
+              EMPTY CATEGORY STATE
+          ==================================================== */
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 15,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            className="flex flex-col items-center justify-center py-16 text-center"
+          >
+            <FaLaptopCode className="text-4xl text-emerald-400/30 mb-4" />
+
+            <h3 className="text-white font-bold text-lg mb-2">
+              No Projects Found
+            </h3>
+
+            <p className="text-gray-500 text-sm">
+              No projects are currently available in this category.
+            </p>
+          </motion.div>
+        )}
 
         {/* ======================================================
             VIEW ALL PROJECTS
@@ -579,7 +695,7 @@ export default function Projects() {
               <span className="text-[10px] uppercase tracking-[0.25em] text-gray-600 font-bold">
                 {showAll
                   ? "All Projects"
-                  : `${projects.length - 5} More Projects`}
+                  : `${filteredProjects.length - 5} More Projects`}
               </span>
 
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/10" />
@@ -609,7 +725,10 @@ export default function Projects() {
 
             {!showAll && (
               <p className="text-gray-600 text-xs mt-3">
-                Explore all {projects.length} projects
+                Explore all {filteredProjects.length}{" "}
+                {selectedCategory === "All"
+                  ? "projects"
+                  : `${selectedCategory.toLowerCase()} projects`}
               </p>
             )}
           </motion.div>
