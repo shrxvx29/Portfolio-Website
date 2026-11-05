@@ -88,13 +88,13 @@ export default function Skills() {
       category: "Frontend",
       role: "Core Logic & Async",
     },
-    // {
-    //   name: "TypeScript",
-    //   icon: <SiTypescript />,
-    //   color: "#3178C6",
-    //   category: "Frontend",
-    //   role: "Type Safety & Interfaces",
-    // },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript />,
+      color: "#3178C6",
+      category: "Frontend",
+      role: "Type Safety & Interfaces",
+    },
     // {
     //   name: "Redux Toolkit",
     //   icon: <SiRedux />,
@@ -165,13 +165,13 @@ export default function Skills() {
       category: "Database",
       role: "NoSQL & Aggregations",
     },
-    // {
-    //   name: "PostgreSQL",
-    //   icon: <SiPostgresql />,
-    //   color: "#4169E1",
-    //   category: "Database",
-    //   role: "Relational ACID Schema",
-    // },
+    {
+      name: "PostgreSQL",
+      icon: <SiPostgresql />,
+      color: "#4169E1",
+      category: "Database",
+      role: "Relational ACID Schema",
+    },
     {
       name: "MySQL",
       icon: <SiMysql />,
@@ -207,13 +207,13 @@ export default function Skills() {
       category: "Tools",
       role: "API Testing & Mocking",
     },
-    // {
-    //   name: "Docker",
-    //   icon: <SiDocker />,
-    //   color: "#2496ED",
-    //   category: "Tools",
-    //   role: "Containerization & Compose",
-    // },
+    {
+      name: "Docker",
+      icon: <SiDocker />,
+      color: "#2496ED",
+      category: "Tools",
+      role: "Containerization & Compose",
+    },
     {
       name: "VS Code",
       icon: <FaCode />,

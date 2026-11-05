@@ -8,6 +8,7 @@ import studentImage from "../public/images/projectImg/std.webp";
 import todoImage from "../public/images/projectImg/todo.webp";
 import guessGameImage from "../public/images/projectImg/GuessGame.webp";
 import forgeSiteImage from "../public/images/projectImg/forgeSiteImage.jpg"
+import nexhireImage from "../public/images/projectImg/nexhireImage.png"
 
 export const portfolioData = {
   personal: {
@@ -26,7 +27,7 @@ export const portfolioData = {
 
     bio: `
       Passionate Full Stack Developer with strong skills in React.js,
-      JavaScript, Node.js, Express.js,SpringBoot, MySql and MongoDB.
+      JavaScript, TypeScript, Node.js, Express.js,SpringBoot, MySql and MongoDB.
       I enjoy building modern web applications, solving real-world problems,
       and continuously learning new technologies.
     `,
@@ -86,35 +87,62 @@ export const portfolioData = {
 
 projects: [
   // =========================================================
-  // 01 — Forge Site
+  // 01 — NEXHIRE
   // =========================================================
   {
-  id: 1,
-  title: "Forge Site",
-  category: "AI Powered Full Stack",
-  highlight: "AI Code Generation • Live Preview • Project Editing",
-  description:
-    "AI-powered website builder that generates complete web projects from natural-language prompts, with live preview, code editing, project management, and instant development workflows.",
-  image: forgeSiteImage,
-  technologies: [
-    "React",
-    "Vite",
-    "Tailwind CSS",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "OpenAI API",
-  ],
-  github: "https://github.com/shrxvx29/Forge-Site---AI-Website-Builder",
-  live: "https://site-forge-ai-website-builder.netlify.app/",
-  featured: true,
-},
+    id: 1,
+    title: "NexHire",
+    category: "AI Powered Full Stack Job Portal",
+    highlight: "AI Resume Analysis • Job Matching • Career Assistant",
+    description:
+      "AI-powered job portal connecting job seekers and employers with job management, resume uploading, AI-driven resume analysis, job matching scores, cover letter generation, and an intelligent career chatbot.",
+    image: nexhireImage,
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Groq API",
+      "Nodemailer",
+    ],
+    github: "https://github.com/shrxvx29/NexHire-AI-Powered-Job-Portal",
+    live: "https://nexhire-ai-jobportal.netlify.app/",
+    featured: true,
+  },
 
   // =========================================================
-  // 02 — KICKKART
+  // 02 — FORGE SITE
   // =========================================================
   {
     id: 2,
+    title: "Forge Site",
+    category: "AI Powered Full Stack",
+    highlight: "AI Code Generation • Live Preview • Project Editing",
+    description:
+      "AI-powered website builder that generates complete web projects from natural-language prompts, with live preview, code editing, project management, and instant development workflows.",
+    image: forgeSiteImage,
+    technologies: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "OpenAI API",
+    ],
+    github: "https://github.com/shrxvx29/Forge-Site---AI-Website-Builder",
+    live: "https://site-forge-ai-website-builder.netlify.app/",
+    featured: true,
+  },
+
+  // =========================================================
+  // 03 — KICKKART
+  // =========================================================
+  {
+    id: 3,
     title: "KickKart",
     category: "Full Stack E-Commerce",
     highlight: "Football Jersey Store • Secure Authentication",
@@ -135,10 +163,10 @@ projects: [
   },
 
   // =========================================================
-  // 03 — HOSTEL ROOM ALLOCATION
+  // 04 — HOSTEL ROOM ALLOCATION
   // =========================================================
   {
-    id: 3,
+    id: 4,
     title: "Hostel Room Allocation System",
     category: "Full Stack Management System",
     highlight: "Room Allocation • Student Management",
@@ -159,10 +187,10 @@ projects: [
   },
 
   // =========================================================
-  // 04 — PERSONAL PORTFOLIO
+  // 05 — PERSONAL PORTFOLIO
   // =========================================================
   {
-    id: 4,
+    id: 5,
     title: "Personal Portfolio",
     category: "Frontend Web Application",
     highlight: "Interactive UI • Modern Developer Portfolio",
@@ -180,10 +208,10 @@ projects: [
   },
 
   // =========================================================
-  // 05 — INSTAGRAM CLONE
+  // 06 — INSTAGRAM CLONE
   // =========================================================
   {
-    id: 5,
+    id: 6,
     title: "Instagram Clone",
     category: "Frontend Web Application",
     highlight: "Responsive Social UI • Feed & Profile",
@@ -201,10 +229,10 @@ projects: [
   },
 
   // =========================================================
-  // 06 — XPENSE TRACKER
+  // 07 — XPENSE TRACKER
   // =========================================================
   {
-    id: 6,
+    id: 7,
     title: "Xpense Tracker",
     category: "Frontend Web Application",
     highlight: "Expense Tracking • Income & Balance Management",
@@ -222,10 +250,10 @@ projects: [
   },
 
   // =========================================================
-  // 07 — STUDENT MANAGEMENT
+  // 08 — STUDENT MANAGEMENT
   // =========================================================
   {
-    id: 7,
+    id: 8,
     title: "Student Management System",
     category: "Frontend Web Application",
     highlight: "CRUD Operations • Student Record Management",
@@ -243,10 +271,10 @@ projects: [
   },
 
   // =========================================================
-  // 08 — TODO APP
+  // 09 — TODO APP
   // =========================================================
   {
-    id: 8,
+    id: 9,
     title: "Todo App",
     category: "Frontend Web Application",
     highlight: "Task Management • Completion Tracking",
@@ -264,10 +292,10 @@ projects: [
   },
 
   // =========================================================
-  // 09 — GUESS NUMBER
+  // 10 — GUESS NUMBER
   // =========================================================
   {
-    id: 9,
+    id: 10,
     title: "Guess Number Game",
     category: "Frontend Web Application",
     highlight: "Random Number Generation • Input Validation",
@@ -280,7 +308,7 @@ projects: [
       "JavaScript",
     ],
     github: "https://github.com/shrxvx29/GuessTheNumber",
-    live: "https://shrxvx29.github.io/GuessTheNumber/",
+    live: "https://shrxvx29.github.io/GuessTheNumber",
     featured: false,
   },
 ],
