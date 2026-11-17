@@ -40,6 +40,7 @@ import {
   SiMysql,
   SiRailway,
   SiNetlify,
+  SiNestjs
 } from "react-icons/si";
 
 import { HiSparkles } from "react-icons/hi";
@@ -123,20 +124,20 @@ export default function Skills() {
       category: "Backend",
       role: "REST Framework",
     },
-    {
-      name: "Java",
-      icon: <FaJava />,
-      color: "#007396",
-      category: "Backend",
-      role: "Object Oriented Language",
-    },
-    {
-      name: "SpringBoot",
-      icon: <SiSpringboot />,
-      color: "#339933",
-      category: "Backend",
-      role: "REST Framework",
-    },
+    // {
+    //   name: "Java",
+    //   icon: <FaJava />,
+    //   color: "#007396",
+    //   category: "Backend",
+    //   role: "Object Oriented Language",
+    // },
+    // {
+    //   name: "SpringBoot",
+    //   icon: <SiSpringboot />,
+    //   color: "#339933",
+    //   category: "Backend",
+    //   role: "REST Framework",
+    // },
     {
       name: "REST APIs",
       icon: <FaServer />,
@@ -215,6 +216,20 @@ export default function Skills() {
       role: "Containerization & Compose",
     },
     {
+  name: "AWS EC2",
+  icon: <FaAws />,
+  color: "#FF9900",
+  category: "Cloud & Deployment",
+  role: "Cloud Computing & Virtual Servers",
+},
+{
+  name: "AWS S3",
+  icon: <FaAws />,
+  color: "#FF9900",
+  category: "Cloud & Deployment",
+  role: "Object Storage & File Management",
+},
+    {
       name: "VS Code",
       icon: <FaCode />,
       color: "#007ACC",
@@ -238,35 +253,42 @@ export default function Skills() {
   ];
 
   const currentlyLearning = [
-    {
-      name: "AWS Cloud Services",
-      icon: <FaAws />,
-      desc: "S3, EC2 instances, API Gateway & serverless deployment architecture.",
-      color: "#FF9900",
-      tag: "Cloud Infrastructure",
-    },
-    {
-      name: "Next.js (App Router)",
-      icon: <SiNextdotjs />,
-      desc: "Full-Stack React, Server Components, SSR, and optimized SEO rendering.",
-      color: "#EEE7D8",
-      tag: "SSR & Full Stack",
-    },
-    {
-      name: "Docker & Containerization",
-      icon: <SiDocker />,
-      desc: "Isolated development environments, multi-stage builds, and Docker Compose.",
-      color: "#2496ED",
-      tag: "DevOps & Deployment",
-    },
-    {
-      name: "System Design & Scalability",
-      icon: <FaBolt />,
-      desc: "Microservices design, load balancing, caching layers, and high-availability patterns.",
-      color: "#4F46E5",
-      tag: "System Architecture",
-    },
-  ];
+  {
+    name: "Next.js",
+    icon: <SiNextdotjs />,
+    desc: "App Router, Server Components, SSR, and full-stack React development.",
+    color: "#EEE7D8",
+    tag: "Frontend & Full Stack",
+  },
+  {
+    name: "NestJS",
+    icon: <SiNestjs />,
+    color: "#E0234E",
+    desc: "Modular backend architecture, dependency injection, decorators, and scalable REST APIs.",
+    tag: "Backend Development",
+  },
+  {
+    name: "Redis",
+    icon: <SiRedis />,
+    color: "#DC382D",
+    desc: "In-memory caching, session management, and high-performance data access.",
+    tag: "Caching & Performance",
+  },
+  {
+    name: "System Design & Architecture",
+    icon: <FaLayerGroup />,
+    color: "#4F46E5",
+    desc: "Scalable application design, database architecture, load balancing, and caching strategies.",
+    tag: "System Architecture",
+  },
+  {
+    name: "Microservices Architecture",
+    icon: <FaCogs />,
+    color: "#06B6D4",
+    desc: "Service decomposition, inter-service communication, API gateways, and distributed systems.",
+    tag: "Distributed Systems",
+  },
+];
 
   const filteredSkills =
     activeCategory === "All"
