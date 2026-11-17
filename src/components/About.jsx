@@ -26,7 +26,7 @@ export default function About() {
     {
       index: "02",
       title: "Full Stack Development",
-      desc: "React, Node.js & SpringBoot end-to-end web applications.",
+      desc: "React, Node.js & Express end-to-end web applications.",
       tech: "React · Node.Js · TypeScript",
       icon: FaLayerGroup,
       offset: true,
@@ -34,8 +34,8 @@ export default function About() {
     {
       index: "03",
       title: "Data & Systems",
-      desc: "MongoDB, PostgreSQL, MySql,",
-      tech: "MongoDB · SQL ",
+      desc: "MongoDB, PostgreSQL, Redis,",
+      tech: "MongoDB · PostgreSQL · Redis",
       icon: FaDatabase,
       offset: false,
     },

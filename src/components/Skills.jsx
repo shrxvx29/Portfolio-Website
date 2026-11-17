@@ -19,7 +19,6 @@ import {
   FaAws,
   FaCheckCircle,
   FaShieldAlt,
-  FaJava,
 } from "react-icons/fa";
 
 import {
@@ -36,8 +35,6 @@ import {
   SiSocketdotio,
   SiJsonwebtokens,
   SiDocker,
-  SiSpringboot,
-  SiMysql,
   SiRailway,
   SiNetlify,
   SiNestjs
@@ -124,20 +121,6 @@ export default function Skills() {
       category: "Backend",
       role: "REST Framework",
     },
-    // {
-    //   name: "Java",
-    //   icon: <FaJava />,
-    //   color: "#007396",
-    //   category: "Backend",
-    //   role: "Object Oriented Language",
-    // },
-    // {
-    //   name: "SpringBoot",
-    //   icon: <SiSpringboot />,
-    //   color: "#339933",
-    //   category: "Backend",
-    //   role: "REST Framework",
-    // },
     {
       name: "REST APIs",
       icon: <FaServer />,
@@ -173,20 +156,6 @@ export default function Skills() {
       category: "Database",
       role: "Relational ACID Schema",
     },
-    {
-      name: "MySQL",
-      icon: <SiMysql />,
-      color: "#4479A1",
-      category: "Database",
-      role: "Relational ACID Schema",
-    },
-    // {
-    //   name: "Redis",
-    //   icon: <SiRedis />,
-    //   color: "#DC382D",
-    //   category: "Database",
-    //   role: "In-Memory Caching & Queues",
-    // },
     {
       name: "Git",
       icon: <FaGitAlt />,

@@ -1,6 +1,4 @@
-import kickKartImage from "../public/images/projectImg/Kickart.webp";
 import jwtImage from "../public/images/projectImg/jwt.webp";
-import hostelImage from "../public/images/projectImg/hostel.webp";
 import portfolioImage from "../public/images/projectImg/portfolio.webp";
 import instagramImage from "../public/images/projectImg/ig.webp";
 import expenseImage from "../public/images/projectImg/exp.webp";
@@ -13,7 +11,7 @@ import nexhireImage from "../public/images/projectImg/nexhireImage.png"
 export const portfolioData = {
   personal: {
     name: "Saravanan K",
-    title: "Full Stack Developer",
+    title: "MERN Stack Developer",
     email: "ksaravanan2922@gmail.com",
     phone: "+91 9176806209 ",
     location: "Chennai, Tamil Nadu, India",
@@ -23,13 +21,13 @@ export const portfolioData = {
       "https://www.linkedin.com/in/saravanankhere/",
 
     tagline:
-      "Building modern, scalable, and user-focused web applications using the MERN Stack & SpringBoot.",
+      "Building modern, scalable, and user-focused web applications using the MERN Stack.",
 
     bio: `
-      Passionate Full Stack Developer with strong skills in React.js,
-      JavaScript, TypeScript, Node.js, Express.js,SpringBoot, MySql and MongoDB.
-      I enjoy building modern web applications, solving real-world problems,
-      and continuously learning new technologies.
+      Passionate MERN Stack Developer with strong skills in React.js,
+      JavaScript, TypeScript, Node.js, Express.js, and MongoDB.
+      I specialize in building full-stack web applications, RESTful APIs,
+      and responsive user interfaces with modern technologies.
     `,
   },
 
@@ -139,58 +137,10 @@ projects: [
   },
 
   // =========================================================
-  // 03 — KICKKART
+  // 03 — PERSONAL PORTFOLIO
   // =========================================================
   {
     id: 3,
-    title: "KickKart",
-    category: "Full Stack E-Commerce",
-    highlight: "Football Jersey Store • Secure Authentication",
-    description:
-      "End-to-end jersey store with protected user flows, cart management, product browsing, and Spring Boot APIs backed by MySQL.",
-    image: kickKartImage,
-    technologies: [
-      "React",
-      "Tailwind CSS",
-      "Spring Boot",
-      "Spring Security",
-      "JWT",
-      "MySQL",
-    ],
-    github: "https://github.com/shrxvx29/KickKart-Jersey-Store-",
-    live: "https://kickkartstore.netlify.app/",
-    featured: true,
-  },
-
-  // =========================================================
-  // 04 — HOSTEL ROOM ALLOCATION
-  // =========================================================
-  {
-    id: 4,
-    title: "Hostel Room Allocation System",
-    category: "Full Stack Management System",
-    highlight: "Room Allocation • Student Management",
-    description:
-      "Data-driven management system for student records, room availability, allocations, authenticated sessions, and dashboard workflows.",
-    image: hostelImage,
-    technologies: [
-      "Java",
-      "JSP",
-      "Servlets",
-      "JDBC",
-      "MySQL",
-      "Tomcat",
-    ],
-    github: "https://github.com/shrxvx29/HostelRoomAllocationSystem",
-    live: "",
-    featured: false,
-  },
-
-  // =========================================================
-  // 05 — PERSONAL PORTFOLIO
-  // =========================================================
-  {
-    id: 5,
     title: "Personal Portfolio",
     category: "Frontend Web Application",
     highlight: "Interactive UI • Modern Developer Portfolio",
@@ -208,10 +158,10 @@ projects: [
   },
 
   // =========================================================
-  // 06 — INSTAGRAM CLONE
+  // 04 — INSTAGRAM CLONE
   // =========================================================
   {
-    id: 6,
+    id: 4,
     title: "Instagram Clone",
     category: "Frontend Web Application",
     highlight: "Responsive Social UI • Feed & Profile",
@@ -229,10 +179,10 @@ projects: [
   },
 
   // =========================================================
-  // 07 — XPENSE TRACKER
+  // 05 — XPENSE TRACKER
   // =========================================================
   {
-    id: 7,
+    id: 5,
     title: "Xpense Tracker",
     category: "Frontend Web Application",
     highlight: "Expense Tracking • Income & Balance Management",
@@ -250,10 +200,10 @@ projects: [
   },
 
   // =========================================================
-  // 08 — STUDENT MANAGEMENT
+  // 06 — STUDENT MANAGEMENT
   // =========================================================
   {
-    id: 8,
+    id: 6,
     title: "Student Management System",
     category: "Frontend Web Application",
     highlight: "CRUD Operations • Student Record Management",
@@ -271,10 +221,10 @@ projects: [
   },
 
   // =========================================================
-  // 09 — TODO APP
+  // 07 — TODO APP
   // =========================================================
   {
-    id: 9,
+    id: 7,
     title: "Todo App",
     category: "Frontend Web Application",
     highlight: "Task Management • Completion Tracking",
@@ -292,10 +242,10 @@ projects: [
   },
 
   // =========================================================
-  // 10 — GUESS NUMBER
+  // 08 — GUESS NUMBER
   // =========================================================
   {
-    id: 10,
+    id: 8,
     title: "Guess Number Game",
     category: "Frontend Web Application",
     highlight: "Random Number Generation • Input Validation",

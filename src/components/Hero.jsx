@@ -74,7 +74,7 @@ export default function Hero() {
     },
     {
       title: 'Modern Stack',
-      desc: 'MERN · SpringBoot · JS',
+      desc: 'MERN · React · Node.js',
       icon: FaLayerGroup,
     },
     {
@@ -257,7 +257,7 @@ export default function Hero() {
             {/* Professional Title */}
 
             <h2 className="font-garamond text-xl sm:text-2xl lg:text-[1.75rem] font-bold text-gray-200 tracking-tight mb-3.5 sm:mb-4 leading-snug">
-              Backend & Full Stack Developer
+              MERN Stack & Full Stack Developer
             </h2>
 
             {/* Professional Hero Description */}
@@ -727,7 +727,7 @@ export default function Hero() {
 
                 <img
                   src={profileImage}
-                  alt="SARAVANAN K - Backend & Full Stack Developer"
+                  alt="SARAVANAN K - MERN Stack & Full Stack Developer"
                   className={`
                     w-full
                     h-full

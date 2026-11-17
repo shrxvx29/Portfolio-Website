@@ -277,7 +277,7 @@ export default function Contact() {
           >
             I&apos;m actively interviewing for{" "}
             <strong className="text-gray-200">
-              Backend & Full Stack Developer
+              MERN Stack & Full Stack Developer
             </strong>{" "}
             roles. Whether you&apos;re a recruiter, hiring manager, or
             founder — I&apos;d love to connect.
@@ -317,7 +317,7 @@ export default function Contact() {
                   <span>
                     Target Roles:{" "}
                     <strong className="text-gray-200">
-                      Backend / Full Stack Developer
+                      MERN Stack / Full Stack Developer
                     </strong>
                   </span>
                 </div>

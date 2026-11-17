@@ -197,7 +197,7 @@ export default function Footer() {
                 </h1>
 
                 <span className="text-emerald-400 font-bold tracking-[0.3em] uppercase block text-xs">
-                  Full Stack Developer
+                  MERN Stack Developer
                 </span>
               </div>
             </a>
@@ -208,7 +208,7 @@ export default function Footer() {
                 fontSize: "clamp(0.8125rem, 1.3vw, 0.875rem)",
               }}
             >
-              Full Stack Developer crafting scalable web applications and
+              MERN Stack Developer crafting scalable web applications and
               modern digital experiences with passion and precision.
             </p>
 
